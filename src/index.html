@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#">
+                <img src="./assets/img/logo.png" alt="logo da coca">
+            </a>
+            <div class="toggle" onclick="toggleMenu()">
+                <div class="row-1"></div>
+                <div class="row-2"></div>
+                <div class="row-3"></div>
+            </div>
+            <ul class="navigation">
+                <li><a href="#">home</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">what`s new</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Wake me up</h2>
+                <p>Wake me up feeling my way through the darkness guided by a beating heart, I can't tell where the journey will end but I know where to start they tell me I'm too young to understand they say I'm caught up in a dream well life will pass me by if I don't open up my eyes well, that's fine by me</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="imgBox">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./assets/img/cocacola1.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./assets/img/cocacola2.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./assets/img/cocacola3.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./assets/img/cocacola4.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./assets/img/cocacola5.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./assets/img/cocacola6.png" />
+                      </div>
+                    </div> 
+                  </div>              
+            </div>
+        </div>
+        <ul class="sci">
+            <li><a href="#"><img src="./assets/img/facebook.png" alt="facebook"></a></li>
+            <li><a href="#"><img src="./assets/img/twitter.png" alt="twitter"></a></li>
+            <li><a href="#"><img src="./assets/img/instagram.png" alt="instagram"></a></li>
+        </ul>
+    </section>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: "auto",
+          coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 300,
+            modifier: 1,
+            slideShadows: true,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+          },
+          loop: true
+        });
+
+        function toggleMenu () {
+            let menuToggle = document.querySelector('.toggle')
+            let navigation = document.querySelector('.navigation')
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
